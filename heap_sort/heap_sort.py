@@ -14,7 +14,7 @@ def descend(A, i, k = len(A)): # i: target node, k: sub tree A[:k]
             A[now], A[next] = A[next], A[now]
             now = next
 
-def heapsort(A):
+def heap_sort(A):
     # heapify(max heap) (O(n))
     for i in range(n//2-1,-1,-1):
         descend(A, i)
@@ -23,3 +23,5 @@ def heapsort(A):
         A[0], A[k] = A[k], A[0]
         descend(A, 0, k)
     return A
+
+print(heap_sort(A))
