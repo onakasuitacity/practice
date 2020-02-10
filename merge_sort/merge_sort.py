@@ -1,7 +1,6 @@
 A = [3, 8, 12, 25, 6, 23, 7, 1, 15, 4, 9, 17]
 
-def merge_sort(A, l=0, r=None):
-    if r is None: r = len(A)
+def merge_sort(A, l=0, r=len(A)):
     # base case
     if r-l==1: return A[l:r]
     # divide
