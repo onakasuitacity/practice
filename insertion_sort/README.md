@@ -6,4 +6,4 @@
 - stable
 
 # Reference
-- https://stackoverflow.com/questions/17055341/why-is-insertion-sort-%ce%98n2-in-the-average-case/17055342#17055342
+- https://stackoverflow.com/questions/17055341 (average time complexity)
