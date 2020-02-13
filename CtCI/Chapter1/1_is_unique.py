@@ -24,4 +24,5 @@ class Test(unittest.TestCase):
         for string in self.dataF:
             self.assertFalse(is_unique(string))
 
-unittest.main()
+if __name__=="__main__":
+    unittest.main()
