@@ -14,6 +14,18 @@ def delete_duplication(ll):
             used.add(now.next.value)
             now = now.next
 
+def without_buffer(ll):
+    if ll.front is None: return
+    now = ll.front
+    while now:
+        iter = now
+        while iter.next:
+            if iter.next.value == now.value:
+                iter.next = iter.next.next
+            else:
+                iter = iter.next
+        now = now.next
+
 ll = LinkedList()
 ll.generate(20,0,5)
 print(ll)
