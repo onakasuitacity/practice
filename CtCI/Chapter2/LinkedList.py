@@ -1,4 +1,4 @@
-# cf. https://github.com/careercup/CtCI-6th-Edition-Python/blob/e6bc732588601d0a98e5b1bc44d83644b910978d/Chapter2/LinkedList.py
+# https://github.com/careercup/CtCI-6th-Edition-Python/blob/e6bc732588601d0a98e5b1bc44d83644b910978d/Chapter2/LinkedList.py
 class Node(object):
     def __init__(self, value):
         self.value = value
@@ -9,12 +9,14 @@ class Node(object):
         return str(self.value)
 
     def __add__(self, value):
+        assert isinstance(value, int) and value >= 0
         res = self
         for _ in range(value):
             res = res.next
         return res
 
     def __sub__(self, value):
+        assert isinstance(value, int) and value >= 0
         res = self
         for _ in range(value):
             res = res.prev
