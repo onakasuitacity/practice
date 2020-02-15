@@ -1,7 +1,7 @@
 from LinkedList import LinkedList
 
 def delete_duplication(ll):
-    now = ll.front
+    now = ll.front()
     if now is None:
         return
     used = set()
@@ -16,7 +16,7 @@ def delete_duplication(ll):
 
 def without_buffer(ll):
     if ll.front is None: return
-    now = ll.front
+    now = ll.front()
     while now:
         iter = now
         while iter.next:
@@ -27,7 +27,8 @@ def without_buffer(ll):
         now = now.next
 
 ll = LinkedList()
-ll.generate(20,0,5)
+ll.generate(10)
 print(ll)
 delete_duplication(ll)
+# without_buffer(ll)
 print(ll)
