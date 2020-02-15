@@ -39,8 +39,13 @@ class LinkedList(object): # doubly
         return sum(1 for _ in self)
 
     def __add__(self, ll):
-        self._back.next, ll._front.prev = ll._front, self._back
-        self._back = ll._back
+        if ll._front is None:
+            pass
+        elif self._front is None:
+            self._front, self_back = ll._front, ll._back
+        else:
+            self._back.next, ll._front.prev = ll._front, self._back
+            self._back = ll._back
         return self
 
     def front(self):
