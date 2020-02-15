@@ -80,4 +80,4 @@ class LinkedList(object): # doubly
         from random import randint
         self._front = self._back = None
         for _ in range(n):
-            self.append(randint(0, 10))
+            self.append(randint(0, 9))
