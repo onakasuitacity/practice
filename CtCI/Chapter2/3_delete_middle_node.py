@@ -5,9 +5,9 @@ def delete_node(node):
 
 
 ll = LinkedList()
-ll.add_multiple([1,2,3,4])
-node = ll.add(5)
-ll.add_multiple([6,7,8])
+ll.append_multiple([1,2,3,4])
+node = ll.append(5)
+ll.append_multiple([6,7,8])
 
 print(ll)
 delete_node(node)
