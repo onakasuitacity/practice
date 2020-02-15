@@ -38,6 +38,11 @@ class LinkedList(object): # doubly
     def __len__(self):
         return sum(1 for _ in self)
 
+    def __add__(self, ll):
+        self._back.next, ll._front.prev = ll._front, self._back
+        self._back = ll._back
+        return self
+
     def front(self):
         return self._front
 
