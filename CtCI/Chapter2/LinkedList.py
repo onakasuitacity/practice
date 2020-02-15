@@ -23,7 +23,8 @@ class LinkedList(object): # doubly
     def __init__(self, values=[]):
         self._front = None
         self._back = None
-        self.append_multiple(values)
+        for v in values:
+            self.append(v)
 
     def __iter__(self):
         now = self._front
@@ -71,10 +72,6 @@ class LinkedList(object): # doubly
             self._front.prev, node.next = node, self._front
             self._front = node
         return self._front
-
-    def append_multiple(self, values):
-        for v in values:
-            self.append(v)
 
     def generate(self, n):
         from random import randint
