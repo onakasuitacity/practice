@@ -10,7 +10,7 @@ class Dog(Animal):
         super().__init__(name)
 
 class Cat(Animal):
-    def __init__(self, name, order):
+    def __init__(self, name):
         super().__init__(name)
 
 
